@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thilina Kushan | Marketing Executive & Luxury Travel Advisor</title>
+  <meta name="description" content="Official portfolio of Thilina Kushan Karunathunga – Area Marketing Executive at Cargills Ceylon PLC and Founder of Lions Ceylonic Tours, Sri Lanka's premier luxury travel company." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500;600&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    /* ─── RESET & BASE ─────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:      #0B1F3A;
+      --navy-mid:  #142A4F;
+      --teal:      #1B7B78;
+      --teal-light:#24A09C;
+      --gold:      #C9A84C;
+      --gold-pale: #E8D49A;
+      --cream:     #F5F0E8;
+      --white:     #FFFFFF;
+      --text-dark: #1A1A2E;
+      --text-mid:  #3D4A5C;
+      --text-light:#8A9BB0;
+      --transition: 0.45s cubic-bezier(0.25,0.46,0.45,0.94);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--navy);
+      color: var(--white);
+      overflow-x: hidden;
+      cursor: none;
+    }
+
+    /* Custom cursor */
+    .cursor {
+      position: fixed; top: 0; left: 0;
+      width: 12px; height: 12px;
+      background: var(--gold);
+      border-radius: 50%;
+      pointer-events: none; z-index: 9999;
+      transform: translate(-50%,-50%);
+      transition: transform 0.1s ease, width 0.3s ease, height 0.3s ease;
+    }
+    .cursor-ring {
+      position: fixed; top: 0; left: 0;
+      width: 36px; height: 36px;
+      border: 1.5px solid rgba(201,168,76,0.5);
+      border-radius: 50%;
+      pointer-events: none; z-index: 9998;
+      transform: translate(-50%,-50%);
+      transition: transform 0.25s ease, width 0.3s ease, height 0.3s ease;
+    }
+    a, button { cursor: none; }
+
+    /* ─── SCROLLBAR ──────────────────────────────────────────────── */
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: var(--navy); }
+    ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 2px; }
+
+    /* ─── NAVIGATION ─────────────────────────────────────────────── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      padding: 1.25rem 4rem;
+      display: flex; align-items: center; justify-content: space-between;
+      transition: background var(--transition), padding var(--transition);
+    }
+    nav.scrolled {
+      background: rgba(11,31,58,0.95);
+      backdrop-filter: blur(20px);
+      padding: 0.85rem 4rem;
+      border-bottom: 1px solid rgba(201,168,76,0.2);
+    }
+    .nav-logo {
+      font-family: 'Cinzel', serif;
+      font-size: 1.1rem; font-weight: 600;
+      color: var(--gold); letter-spacing: 0.08em;
+      text-decoration: none;
+    }
+    .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+    .nav-links a {
+      font-size: 0.8rem; font-weight: 500; letter-spacing: 0.12em;
+      text-transform: uppercase; color: rgba(255,255,255,0.75);
+      text-decoration: none; position: relative;
+      transition: color var(--transition);
+    }
+    .nav-links a::after {
+      content: ''; position: absolute; bottom: -4px; left: 0;
+      width: 0; height: 1px; background: var(--gold);
+      transition: width var(--transition);
+    }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-cta {
+      padding: 0.5rem 1.5rem;
+      border: 1px solid var(--gold); border-radius: 2px;
+      color: var(--gold) !important; font-size: 0.75rem !important;
+      text-transform: uppercase !important; letter-spacing: 0.12em !important;
+      transition: background var(--transition), color var(--transition) !important;
+    }
+    .nav-cta:hover { background: var(--gold); color: var(--navy) !important; }
+    .nav-cta:hover::after { width: 0 !important; }
+
+    /* ─── HERO ───────────────────────────────────────────────────── */
+    .hero {
+      min-height: 100vh; position: relative;
+      display: flex; align-items: center;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, #061524 0%, #0B1F3A 40%, #122840 70%, #0D2A2A 100%);
+    }
+    .hero-bg::before {
+      content: ''; position: absolute; inset: 0;
+      background: 
+        radial-gradient(ellipse 60% 80% at 70% 50%, rgba(27,123,120,0.15) 0%, transparent 60%),
+        radial-gradient(ellipse 40% 60% at 30% 30%, rgba(201,168,76,0.08) 0%, transparent 50%);
+    }
+    /* Decorative grid lines */
+    .hero-bg::after {
+      content: ''; position: absolute; inset: 0;
+      background-image: 
+        linear-gradient(rgba(201,168,76,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(201,168,76,0.04) 1px, transparent 1px);
+      background-size: 80px 80px;
+    }
+    .hero-content {
+      position: relative; z-index: 2;
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 4rem; align-items: center;
+      max-width: 1300px; margin: 0 auto;
+      padding: 8rem 4rem 4rem;
+      width: 100%;
+    }
+    .hero-text { animation: fadeSlideUp 1s ease forwards; }
+    .hero-eyebrow {
+      font-size: 0.72rem; font-weight: 500; letter-spacing: 0.25em;
+      text-transform: uppercase; color: var(--gold);
+      margin-bottom: 1.5rem; display: flex; align-items: center; gap: 1rem;
+    }
+    .hero-eyebrow::before {
+      content: ''; display: inline-block;
+      width: 40px; height: 1px; background: var(--gold);
+    }
+    .hero-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(3rem, 5vw, 5.5rem);
+      font-weight: 300; line-height: 1.05;
+      margin-bottom: 0.5rem; letter-spacing: -0.01em;
+    }
+    .hero-name span { color: var(--gold); font-style: italic; }
+    .hero-title {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(0.7rem, 1.2vw, 0.9rem);
+      letter-spacing: 0.2em; color: var(--teal-light);
+      text-transform: uppercase; margin-bottom: 2rem;
+    }
+    .hero-desc {
+      font-size: 1.05rem; line-height: 1.8;
+      color: rgba(255,255,255,0.65); max-width: 480px;
+      margin-bottom: 2.5rem; font-weight: 300;
+    }
+    .hero-badges {
+      display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2.5rem;
+    }
+    .badge {
+      padding: 0.4rem 1rem;
+      border: 1px solid rgba(201,168,76,0.3);
+      border-radius: 2px; font-size: 0.72rem;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--gold-pale); font-weight: 500;
+      background: rgba(201,168,76,0.05);
+    }
+    .hero-btns { display: flex; gap: 1.25rem; flex-wrap: wrap; }
+    .btn-primary {
+      padding: 0.85rem 2.5rem;
+      background: var(--gold); color: var(--navy);
+      font-size: 0.78rem; font-weight: 600;
+      letter-spacing: 0.15em; text-transform: uppercase;
+      text-decoration: none; border: none;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 40px rgba(201,168,76,0.35);
+    }
+    .btn-secondary {
+      padding: 0.85rem 2.5rem;
+      background: transparent; color: var(--white);
+      font-size: 0.78rem; font-weight: 500;
+      letter-spacing: 0.15em; text-transform: uppercase;
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.25);
+      transition: border-color var(--transition), color var(--transition);
+    }
+    .btn-secondary:hover { border-color: var(--white); color: var(--white); }
+
+    /* Hero profile image */
+    .hero-visual {
+      position: relative;
+      animation: fadeSlideUp 1s 0.3s ease forwards; opacity: 0;
+    }
+    .hero-visual::before {
+      content: ''; position: absolute;
+      top: -20px; right: -20px;
+      width: 100%; height: 100%;
+      border: 1px solid rgba(201,168,76,0.3);
+      z-index: 0;
+    }
+    .hero-visual::after {
+      content: ''; position: absolute;
+      bottom: -20px; left: -20px;
+      width: 70%; height: 70%;
+      background: linear-gradient(135deg, rgba(27,123,120,0.3), transparent);
+      z-index: 0;
+    }
+    .profile-img {
+      width: 100%; max-width: 480px;
+      display: block; position: relative; z-index: 1;
+      object-fit: cover; object-position: top center;
+      max-height: 600px;
+      filter: grayscale(8%) contrast(1.05);
+    }
+    .hero-stats {
+      position: absolute; bottom: -20px; left: -40px; z-index: 3;
+      background: rgba(11,31,58,0.95);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(201,168,76,0.25);
+      padding: 1.25rem 1.75rem;
+      display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.5rem;
+    }
+    .stat { text-align: center; }
+    .stat-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem; font-weight: 600; color: var(--gold);
+      line-height: 1;
+    }
+    .stat-label {
+      font-size: 0.62rem; text-transform: uppercase;
+      letter-spacing: 0.1em; color: rgba(255,255,255,0.5);
+      margin-top: 0.25rem;
+    }
+    .scroll-indicator {
+      position: absolute; bottom: 2.5rem; left: 50%;
+      transform: translateX(-50%); z-index: 2;
+      display: flex; flex-direction: column;
+      align-items: center; gap: 0.5rem;
+      animation: pulse 2s infinite;
+    }
+    .scroll-indicator span {
+      font-size: 0.6rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: rgba(255,255,255,0.4);
+    }
+    .scroll-line {
+      width: 1px; height: 50px;
+      background: linear-gradient(to bottom, var(--gold), transparent);
+    }
+
+    /* ─── SECTIONS SHARED ────────────────────────────────────────── */
+    section { position: relative; }
+    .section-inner {
+      max-width: 1300px; margin: 0 auto;
+      padding: 7rem 4rem;
+    }
+    .section-label {
+      font-size: 0.68rem; letter-spacing: 0.3em;
+      text-transform: uppercase; color: var(--gold);
+      display: flex; align-items: center; gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    .section-label::before {
+      content: ''; width: 30px; height: 1px;
+      background: var(--gold);
+    }
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.2rem, 4vw, 3.5rem);
+      font-weight: 300; line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+    .section-title em { font-style: italic; color: var(--gold); }
+    .section-line {
+      width: 60px; height: 2px;
+      background: linear-gradient(to right, var(--gold), transparent);
+      margin-bottom: 3rem;
+    }
+
+    /* ─── ABOUT ──────────────────────────────────────────────────── */
+    #about { background: var(--navy); }
+    .about-grid {
+      display: grid; grid-template-columns: 1fr 1.4fr;
+      gap: 6rem; align-items: center;
+    }
+    .about-portrait-wrap {
+      position: relative;
+    }
+    .about-portrait-wrap::before {
+      content: 'K';
+      position: absolute; top: -1rem; left: -1.5rem;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 15rem; font-weight: 700;
+      color: rgba(201,168,76,0.06); line-height: 1;
+      z-index: 0; user-select: none;
+    }
+    .about-portrait {
+      width: 100%; max-width: 380px;
+      aspect-ratio: 3/4; object-fit: cover; object-position: top;
+      position: relative; z-index: 1;
+      border: 1px solid rgba(201,168,76,0.2);
+    }
+    .about-portrait-badge {
+      position: absolute; bottom: 2rem; right: -2rem; z-index: 2;
+      background: var(--gold); padding: 1rem 1.25rem;
+      font-family: 'Cormorant Garamond', serif;
+      text-align: center;
+    }
+    .about-portrait-badge .num {
+      display: block; font-size: 2.5rem; font-weight: 700;
+      color: var(--navy); line-height: 1;
+    }
+    .about-portrait-badge .lbl {
+      display: block; font-size: 0.6rem;
+      color: var(--navy); font-family: 'DM Sans', sans-serif;
+      letter-spacing: 0.08em; text-transform: uppercase;
+    }
+    .about-text p {
+      font-size: 1.05rem; line-height: 1.85;
+      color: rgba(255,255,255,0.7); font-weight: 300;
+      margin-bottom: 1.25rem;
+    }
+    .about-roles {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 1rem; margin-top: 2.5rem;
+    }
+    .role-card {
+      padding: 1.5rem;
+      border: 1px solid rgba(201,168,76,0.2);
+      background: rgba(201,168,76,0.04);
+      transition: border-color var(--transition), background var(--transition);
+    }
+    .role-card:hover {
+      border-color: rgba(201,168,76,0.5);
+      background: rgba(201,168,76,0.08);
+    }
+    .role-card .icon {
+      font-size: 1.5rem; margin-bottom: 0.75rem;
+    }
+    .role-card h4 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem; font-weight: 600;
+      color: var(--gold); margin-bottom: 0.4rem;
+    }
+    .role-card p {
+      font-size: 0.82rem; color: rgba(255,255,255,0.55);
+      line-height: 1.5; margin: 0;
+    }
+
+    /* ─── MARKETING CAREER ───────────────────────────────────────── */
+    #marketing {
+      background: linear-gradient(180deg, var(--navy) 0%, var(--navy-mid) 100%);
+    }
+    .marketing-header {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 4rem; align-items: start; margin-bottom: 4rem;
+    }
+    .cargills-brand {
+      display: flex; align-items: center; gap: 1.25rem;
+      padding: 1.25rem 1.75rem;
+      border: 1px solid rgba(201,168,76,0.2);
+      background: rgba(201,168,76,0.03);
+      margin-bottom: 2rem;
+    }
+    .cargills-brand img {
+      width: 48px; height: 48px;
+      object-fit: contain; filter: brightness(0) invert(1) sepia(1) saturate(2) hue-rotate(5deg);
+      opacity: 0.7;
+    }
+    .cargills-brand div { font-size: 0.78rem; }
+    .cargills-brand strong {
+      display: block; color: var(--gold);
+      font-size: 0.9rem; margin-bottom: 0.1rem;
+    }
+    .cargills-brand a {
+      color: var(--teal-light); font-size: 0.72rem;
+      text-decoration: none;
+    }
+    .career-timeline { position: relative; }
+    .career-timeline::before {
+      content: ''; position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 1px; background: linear-gradient(to bottom, var(--gold), transparent);
+    }
+    .timeline-item {
+      padding-left: 2.5rem; margin-bottom: 2.5rem;
+      position: relative; opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    .timeline-item.visible { opacity: 1; transform: none; }
+    .timeline-dot {
+      position: absolute; left: -5px; top: 0.4rem;
+      width: 10px; height: 10px; border-radius: 50%;
+      background: var(--gold);
+      box-shadow: 0 0 0 4px rgba(201,168,76,0.2);
+    }
+    .timeline-period {
+      font-size: 0.68rem; letter-spacing: 0.15em;
+      text-transform: uppercase; color: var(--gold);
+      margin-bottom: 0.35rem;
+    }
+    .timeline-role {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.35rem; font-weight: 600; margin-bottom: 0.25rem;
+    }
+    .timeline-company {
+      font-size: 0.82rem; color: var(--teal-light);
+      margin-bottom: 0.5rem;
+    }
+    .timeline-region {
+      font-size: 0.75rem; color: rgba(255,255,255,0.45);
+      font-style: italic;
+    }
+
+    .skills-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1px; background: rgba(201,168,76,0.1);
+      border: 1px solid rgba(201,168,76,0.1);
+      margin-top: 3rem;
+    }
+    .skill-item {
+      background: var(--navy-mid); padding: 1.5rem;
+      text-align: center;
+      transition: background var(--transition);
+    }
+    .skill-item:hover { background: rgba(201,168,76,0.08); }
+    .skill-item .skill-icon { font-size: 1.6rem; margin-bottom: 0.5rem; }
+    .skill-item h4 {
+      font-size: 0.8rem; font-weight: 600;
+      color: var(--gold-pale); margin-bottom: 0.3rem;
+      letter-spacing: 0.05em;
+    }
+    .skill-item p { font-size: 0.72rem; color: rgba(255,255,255,0.45); }
+
+    /* ─── LIONS CEYLONIC TOURS ───────────────────────────────────── */
+    #lions {
+      background: linear-gradient(180deg, var(--navy-mid) 0%, #061E24 100%);
+      overflow: hidden;
+    }
+    .lions-header {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 4rem; align-items: center; margin-bottom: 4rem;
+    }
+    .lions-brand-block {
+      display: flex; align-items: center; gap: 2rem;
+      margin-bottom: 2rem;
+    }
+    .lions-logo-img {
+      width: 110px; height: 110px;
+      object-fit: contain;
+      filter: drop-shadow(0 4px 20px rgba(201,168,76,0.3));
+    }
+    .lions-brand-text h2 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.8rem; font-weight: 700; color: var(--gold);
+    }
+    .lions-brand-text p {
+      font-size: 0.75rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--teal-light);
+    }
+    .lions-desc {
+      font-size: 1rem; line-height: 1.85;
+      color: rgba(255,255,255,0.65); font-weight: 300;
+      margin-bottom: 1.5rem;
+    }
+    .contact-chips { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+    .chip {
+      display: flex; align-items: center; gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      border: 1px solid rgba(27,123,120,0.4);
+      background: rgba(27,123,120,0.08);
+      border-radius: 2px; font-size: 0.78rem;
+      color: var(--teal-light); text-decoration: none;
+      transition: all var(--transition);
+    }
+    .chip:hover {
+      border-color: var(--teal-light);
+      background: rgba(27,123,120,0.18);
+      color: var(--white);
+    }
+
+    /* Tour gallery */
+    .tour-gallery {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 260px 260px;
+      gap: 6px;
+    }
+    .gallery-item {
+      position: relative; overflow: hidden;
+      cursor: none;
+    }
+    .gallery-item:nth-child(1) { grid-column: 1/3; grid-row: 1; }
+    .gallery-item:nth-child(2) { grid-column: 3; grid-row: 1; }
+    .gallery-item:nth-child(3) { grid-column: 4; grid-row: 1; }
+    .gallery-item:nth-child(4) { grid-column: 1; grid-row: 2; }
+    .gallery-item:nth-child(5) { grid-column: 2; grid-row: 2; }
+    .gallery-item:nth-child(6) { grid-column: 3/5; grid-row: 2; }
+    .gallery-item img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+    .gallery-item:hover img { transform: scale(1.06); }
+    .gallery-item::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(6,20,36,0.7) 0%, transparent 50%);
+      opacity: 0; transition: opacity var(--transition);
+    }
+    .gallery-item:hover::after { opacity: 1; }
+
+    /* ─── REVIEWS ────────────────────────────────────────────────── */
+    #reviews {
+      background: var(--navy);
+      border-top: 1px solid rgba(201,168,76,0.1);
+      border-bottom: 1px solid rgba(201,168,76,0.1);
+    }
+    .reviews-intro {
+      text-align: center; max-width: 600px;
+      margin: 0 auto 4rem; 
+    }
+    .reviews-intro .section-label { justify-content: center; }
+    .reviews-intro .section-label::before { display: none; }
+    .platforms-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 2rem; margin-bottom: 4rem;
+    }
+    .platform-card {
+      padding: 2.5rem 2rem; text-align: center;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.02);
+      transition: border-color var(--transition), transform var(--transition);
+    }
+    .platform-card:hover {
+      border-color: rgba(201,168,76,0.3);
+      transform: translateY(-4px);
+    }
+    .platform-logo {
+      height: 40px; object-fit: contain;
+      margin: 0 auto 1.5rem; display: block;
+      filter: brightness(0) invert(1); opacity: 0.8;
+    }
+    .platform-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem; margin-bottom: 0.75rem;
+    }
+    .platform-card p {
+      font-size: 0.82rem; color: rgba(255,255,255,0.5);
+      line-height: 1.6; margin-bottom: 1.25rem;
+    }
+    .platform-links { display: flex; flex-direction: column; gap: 0.5rem; }
+    .review-link {
+      display: block; padding: 0.5rem 1rem;
+      border: 1px solid rgba(201,168,76,0.2);
+      color: var(--gold-pale); font-size: 0.72rem;
+      text-decoration: none; letter-spacing: 0.06em;
+      transition: all var(--transition);
+    }
+    .review-link:hover {
+      background: rgba(201,168,76,0.1);
+      border-color: var(--gold); color: var(--gold);
+    }
+    .stars {
+      color: var(--gold); font-size: 1rem;
+      letter-spacing: 0.1em; margin-bottom: 0.75rem;
+    }
+
+    /* ─── TESTIMONIALS ───────────────────────────────────────────── */
+    .testimonials-strip {
+      background: rgba(27,123,120,0.08);
+      border: 1px solid rgba(27,123,120,0.2);
+      padding: 3rem;
+      display: grid; grid-template-columns: repeat(3,1fr); gap: 2rem;
+    }
+    .testimonial {
+      padding: 0 1.5rem;
+      border-left: 2px solid rgba(201,168,76,0.3);
+    }
+    .testimonial blockquote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.05rem; font-style: italic;
+      line-height: 1.7; color: rgba(255,255,255,0.75);
+      margin-bottom: 1rem;
+    }
+    .testimonial cite {
+      font-size: 0.72rem; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--gold);
+      font-style: normal;
+    }
+
+    /* ─── GALLERY / MY LIFE ──────────────────────────────────────── */
+    #gallery {
+      background: linear-gradient(180deg, var(--navy) 0%, #030D18 100%);
+    }
+    .gallery-header { text-align: center; margin-bottom: 4rem; }
+    .gallery-header .section-label { justify-content: center; }
+    .gallery-header .section-label::before { display: none; }
+    .gallery-header .section-line { margin: 1rem auto 0; }
+    .life-masonry {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: 260px;
+      gap: 8px;
+    }
+    .life-item {
+      position: relative; overflow: hidden;
+      cursor: none;
+    }
+    .life-item:nth-child(1) { grid-row: span 2; }
+    .life-item:nth-child(4) { grid-row: span 2; }
+    .life-item img {
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: top;
+      transition: transform 0.6s ease;
+    }
+    .life-item:hover img { transform: scale(1.07); }
+    .life-item-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(201,168,76,0.3), rgba(27,123,120,0.3));
+      opacity: 0; transition: opacity var(--transition);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .life-item:hover .life-item-overlay { opacity: 1; }
+    .life-overlay-icon {
+      width: 48px; height: 48px;
+      border: 2px solid white; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.2rem; color: white;
+    }
+
+    /* ─── CONTACT ────────────────────────────────────────────────── */
+    #contact { background: var(--navy-mid); }
+    .contact-grid {
+      display: grid; grid-template-columns: 1.2fr 1fr;
+      gap: 6rem; align-items: start;
+    }
+    .contact-intro .section-title { margin-bottom: 0.5rem; }
+    .contact-text {
+      font-size: 1rem; line-height: 1.8;
+      color: rgba(255,255,255,0.6); font-weight: 300;
+      margin-bottom: 3rem;
+    }
+    .contact-items { display: flex; flex-direction: column; gap: 1.25rem; }
+    .contact-item {
+      display: flex; align-items: flex-start; gap: 1.25rem;
+      padding: 1.25rem;
+      border: 1px solid rgba(255,255,255,0.07);
+      background: rgba(255,255,255,0.02);
+      transition: border-color var(--transition);
+    }
+    .contact-item:hover { border-color: rgba(201,168,76,0.3); }
+    .contact-icon {
+      width: 42px; height: 42px; flex-shrink: 0;
+      background: rgba(201,168,76,0.12);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+    }
+    .contact-item-body h4 {
+      font-size: 0.7rem; letter-spacing: 0.15em;
+      text-transform: uppercase; color: var(--gold);
+      margin-bottom: 0.3rem;
+    }
+    .contact-item-body p, .contact-item-body a {
+      font-size: 0.92rem; color: rgba(255,255,255,0.7);
+      text-decoration: none; line-height: 1.4;
+    }
+    .contact-item-body a:hover { color: var(--gold); }
+
+    .contact-form { display: flex; flex-direction: column; gap: 1rem; }
+    .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+    .form-label {
+      font-size: 0.68rem; letter-spacing: 0.15em;
+      text-transform: uppercase; color: var(--gold);
+    }
+    .form-input, .form-textarea {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+      color: var(--white); font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem; padding: 0.85rem 1rem;
+      outline: none; resize: none;
+      transition: border-color var(--transition);
+    }
+    .form-input:focus, .form-textarea:focus {
+      border-color: var(--gold);
+    }
+    .form-textarea { height: 130px; }
+    .btn-submit {
+      padding: 1rem 2rem;
+      background: var(--gold); color: var(--navy);
+      font-size: 0.78rem; font-weight: 600;
+      letter-spacing: 0.15em; text-transform: uppercase;
+      border: none; font-family: 'DM Sans', sans-serif;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .btn-submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(201,168,76,0.3);
+    }
+
+    /* ─── FOOTER ─────────────────────────────────────────────────── */
+    footer {
+      background: #040F1E;
+      border-top: 1px solid rgba(201,168,76,0.15);
+      padding: 3rem 4rem;
+    }
+    .footer-inner {
+      max-width: 1300px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .footer-brand {
+      font-family: 'Cinzel', serif;
+      font-size: 1.1rem; color: var(--gold);
+      letter-spacing: 0.08em;
+    }
+    .footer-text {
+      font-size: 0.75rem; color: rgba(255,255,255,0.35);
+      letter-spacing: 0.05em;
+    }
+    .footer-links { display: flex; gap: 1.5rem; }
+    .footer-links a {
+      font-size: 0.7rem; letter-spacing: 0.12em;
+      text-transform: uppercase; color: rgba(255,255,255,0.4);
+      text-decoration: none; transition: color var(--transition);
+    }
+    .footer-links a:hover { color: var(--gold); }
+
+    /* ─── ANIMATIONS ─────────────────────────────────────────────── */
+    @keyframes fadeSlideUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to   { opacity: 1; transform: none; }
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 0.5; transform: translateX(-50%) translateY(0); }
+      50% { opacity: 1; transform: translateX(-50%) translateY(8px); }
+    }
+    .reveal {
+      opacity: 0; transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible { opacity: 1; transform: none; }
+
+    /* ─── LIGHTBOX ───────────────────────────────────────────────── */
+    .lightbox {
+      position: fixed; inset: 0; z-index: 9000;
+      background: rgba(4,15,30,0.97);
+      display: none; align-items: center; justify-content: center;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox img {
+      max-width: 90vw; max-height: 88vh;
+      object-fit: contain; border: 1px solid rgba(201,168,76,0.2);
+    }
+    .lightbox-close {
+      position: absolute; top: 1.5rem; right: 2rem;
+      font-size: 2rem; color: var(--gold);
+      background: none; border: none; cursor: none;
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    /* ─── RESPONSIVE ─────────────────────────────────────────────── */
+    @media (max-width: 1024px) {
+      nav { padding: 1.25rem 2rem; }
+      nav.scrolled { padding: 0.85rem 2rem; }
+      .hero-content { grid-template-columns: 1fr; padding: 7rem 2rem 4rem; text-align: center; }
+      .hero-visual { display: none; }
+      .hero-eyebrow { justify-content: center; }
+      .hero-desc { margin: 0 auto 2.5rem; }
+      .hero-btns { justify-content: center; }
+      .section-inner { padding: 5rem 2rem; }
+      .about-grid, .marketing-header, .lions-header, .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .tour-gallery { grid-template-columns: repeat(2,1fr); grid-template-rows: auto; }
+      .gallery-item:nth-child(1), .gallery-item:nth-child(6) { grid-column: auto; }
+      .platforms-grid { grid-template-columns: 1fr; }
+      .testimonials-strip { grid-template-columns: 1fr; }
+      .life-masonry { grid-template-columns: repeat(2,1fr); }
+      .life-item:nth-child(1), .life-item:nth-child(4) { grid-row: span 1; }
+      .footer-inner { flex-direction: column; gap: 1.5rem; text-align: center; }
+      .nav-links { display: none; }
+      .skills-grid { grid-template-columns: repeat(2,1fr); }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Custom cursor -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursor-ring"></div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightbox-close">&times;</button>
+  <img id="lightbox-img" src="" alt="Gallery" />
+</div>
+
+<!-- ─── NAVIGATION ────────────────────────────────────── -->
+<nav id="navbar">
+  <a href="#home" class="nav-logo">KUSHAN</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#marketing">Career</a></li>
+    <li><a href="#lions">Lions Tours</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#contact" class="nav-cta">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ─── HERO ──────────────────────────────────────────── -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-text">
+      <div class="hero-eyebrow">Area Marketing Executive &amp; Luxury Travel Advisor</div>
+      <h1 class="hero-name">Thilina <span>Kushan</span><br>Karunathunga</h1>
+      <div class="hero-title">Marketing | FMCG | Luxury Travel · Sri Lanka</div>
+      <p class="hero-desc">A decade of driving brand growth across Sri Lanka's most dynamic markets — and a passion for curating unforgettable luxury experiences in the Pearl of the Indian Ocean.</p>
+      <div class="hero-badges">
+        <span class="badge">10+ Years Experience</span>
+        <span class="badge">FMCG Industry</span>
+        <span class="badge">Luxury Travel</span>
+      </div>
+      <div class="hero-btns">
+        <a href="#lions" class="btn-primary">Explore Tours</a>
+        <a href="#contact" class="btn-secondary">Get in Touch</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <img src="assets/images/profile.jpg" alt="Thilina Kushan Karunathunga" class="profile-img" />
+      <div class="hero-stats">
+        <div class="stat">
+          <div class="stat-num">10+</div>
+          <div class="stat-label">Years in Marketing</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">500+</div>
+          <div class="stat-label">Clients Served</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">5★</div>
+          <div class="stat-label">Tour Reviews</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-indicator">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ─── ABOUT ─────────────────────────────────────────── -->
+<section id="about">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-portrait-wrap reveal">
+        <img src="assets/images/life-1.jpg" alt="Kushan professional" class="about-portrait" />
+        <div class="about-portrait-badge">
+          <span class="num">10</span>
+          <span class="lbl">Years Experience</span>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="section-label">Who I Am</div>
+        <h2 class="section-title">Two Passions,<br><em>One Vision</em></h2>
+        <div class="section-line"></div>
+        <p class="about-text">I'm Thilina Kushan Karunathunga — a senior marketing professional and luxury travel entrepreneur based in the Cultural Triangle of Sri Lanka. My life sits at the intersection of two worlds: the high-stakes arena of FMCG marketing, and the extraordinary beauty of Ceylon as experienced through the eyes of international travellers.</p>
+        <p class="about-text">At Cargills Ceylon PLC, I've spent over a decade mastering territory management, trade marketing strategy, and channel development across Sri Lanka's most diverse and challenging regions. Away from the boardroom, I founded Lions Ceylonic Tours to share my homeland's wonders with the world — one perfectly crafted itinerary at a time.</p>
+        <div class="about-roles">
+          <div class="role-card">
+            <div class="icon">📊</div>
+            <h4>Marketing Executive</h4>
+            <p>Area-level strategy &amp; territory management at Cargills Ceylon PLC</p>
+          </div>
+          <div class="role-card">
+            <div class="icon">🦁</div>
+            <h4>Travel Entrepreneur</h4>
+            <p>Founder of Lions Ceylonic Tours — est. 2024, luxury travel</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── MARKETING CAREER ───────────────────────────────── -->
+<section id="marketing">
+  <div class="section-inner">
+    <div class="marketing-header">
+      <div class="reveal">
+        <div class="section-label">Professional Career</div>
+        <h2 class="section-title">A Decade of<br><em>Market Leadership</em></h2>
+        <div class="section-line"></div>
+        <p style="font-size:1rem;line-height:1.8;color:rgba(255,255,255,0.6);font-weight:300;margin-bottom:2rem;">From building ground-up distribution corridors in Trincomalee to leading multi-district campaigns across the Cultural Triangle, my career has been defined by consistent performance, territory expansion, and the ability to turn market insight into revenue growth.</p>
+        <div class="cargills-brand">
+          <div>
+            <strong>Cargills Ceylon PLC</strong>
+            <span style="color:rgba(255,255,255,0.5);font-size:0.75rem;display:block;margin-bottom:0.2rem;">Area Marketing Executive · 2019 – Present</span>
+            <a href="https://www.cargillsceylon.com/" target="_blank">www.cargillsceylon.com ↗</a>
+          </div>
+        </div>
+      </div>
+      <div class="career-timeline reveal">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-period">2019 – Present</div>
+          <div class="timeline-role">Area Marketing Executive</div>
+          <div class="timeline-company">Cargills Ceylon PLC</div>
+          <div class="timeline-region">Cultural Triangle · Jaffna · Kurunegala · Kandy · Passikudah</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-period">2017 – 2019</div>
+          <div class="timeline-role">Marketing Executive</div>
+          <div class="timeline-company">Asriel Marketing</div>
+          <div class="timeline-region">Cultural Triangle · Kandy</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-period">2016 – 2017</div>
+          <div class="timeline-role">Sales &amp; Marketing Executive</div>
+          <div class="timeline-company">East West Foods</div>
+          <div class="timeline-region">Trincomalee · Passikudah · Anuradhapura</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-period">2014 – 2016</div>
+          <div class="timeline-role">Marketing Sales Representative</div>
+          <div class="timeline-company">Unilever Food Solutions</div>
+          <div class="timeline-region">Cultural Triangle</div>
+        </div>
+      </div>
+    </div>
+    <div class="skills-grid reveal">
+      <div class="skill-item">
+        <div class="skill-icon">🗺️</div>
+        <h4>Territory Management</h4>
+        <p>5-district portfolio covering Sri Lanka's most strategic zones</p>
+      </div>
+      <div class="skill-item">
+        <div class="skill-icon">📣</div>
+        <h4>Trade Marketing</h4>
+        <p>In-store campaigns, POS placement &amp; promotional strategy</p>
+      </div>
+      <div class="skill-item">
+        <div class="skill-icon">🤝</div>
+        <h4>Key Account Mgmt</h4>
+        <p>300+ active retail &amp; wholesale accounts maintained</p>
+      </div>
+      <div class="skill-item">
+        <div class="skill-icon">📈</div>
+        <h4>Revenue Growth</h4>
+        <p>Consistent 110–120% of quarterly targets achieved</p>
+      </div>
+      <div class="skill-item">
+        <div class="skill-icon">🔍</div>
+        <h4>Market Research</h4>
+        <p>Consumer insights, competitive analysis &amp; whitespace mapping</p>
+      </div>
+      <div class="skill-item">
+        <div class="skill-icon">👥</div>
+        <h4>Team Leadership</h4>
+        <p>8-member field crew coached, managed &amp; developed</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── LIONS CEYLONIC TOURS ───────────────────────────── -->
+<section id="lions">
+  <div class="section-inner">
+    <div class="lions-header">
+      <div class="reveal">
+        <div class="section-label">Travel Business</div>
+        <h2 class="section-title">Lions <em>Ceylonic</em><br>Tours</h2>
+        <div class="section-line"></div>
+        <div class="lions-brand-block">
+          <img src="assets/images/lions-logo.jpg" alt="Lions Ceylonic Tours" class="lions-logo-img" />
+          <div class="lions-brand-text">
+            <h2>LIONS CEYLONIC TOURS</h2>
+            <p>Est. 2024 · Luxury Travel Sri Lanka</p>
+          </div>
+        </div>
+        <p class="lions-desc">Lions Ceylonic Tours was born from a simple conviction: Sri Lanka deserves to be experienced at its finest. We design bespoke itineraries that go beyond the tourist trail — night safaris to spot nocturnal wildlife, traditional village experiences, mangrove boat rides, and encounters with the island's awe-inspiring elephant herds.</p>
+        <p class="lions-desc">Listed on GetYourGuide, Viator, and TripAdvisor, with a growing collection of five-star reviews from international travellers who discovered Ceylon through our eyes.</p>
+        <div class="contact-chips">
+          <a href="http://www.lionsceylonictours.com" target="_blank" class="chip">🌐 lionsceylonictours.com</a>
+          <a href="https://wa.me/94779565880" target="_blank" class="chip">💬 WhatsApp: +94 77 956 5880</a>
+          <a href="tel:+94775533276" class="chip">📞 +94 77 553 3276</a>
+        </div>
+      </div>
+      <div class="reveal">
+        <div style="position:relative;overflow:hidden;height:460px;">
+          <img src="assets/images/tour-8.jpg" alt="Elephant Safari Sri Lanka" style="width:100%;height:100%;object-fit:cover;" />
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(6,30,36,0.8) 0%,transparent 50%);"></div>
+          <div style="position:absolute;bottom:1.5rem;left:1.5rem;right:1.5rem;">
+            <div style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:300;color:white;line-height:1.2;">Minneriya Elephant<br><em style="color:var(--gold)">Gathering Safari</em></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tour Experience Gallery -->
+    <div class="reveal">
+      <div class="section-label" style="margin-bottom:1.5rem;">Tour Experiences</div>
+      <div class="tour-gallery">
+        <div class="gallery-item">
+          <img src="assets/images/tour-1.jpg" alt="Sigiriya Rock Fortress" onclick="openLightbox(this.src)" />
+        </div>
+        <div class="gallery-item">
+          <img src="assets/images/tour-2.jpg" alt="Tuk-Tuk Tour" onclick="openLightbox(this.src)" />
+        </div>
+        <div class="gallery-item">
+          <img src="assets/images/tour-3.jpg" alt="Mangrove Boat Ride" onclick="openLightbox(this.src)" />
+        </div>
+        <div class="gallery-item">
+          <img src="assets/images/tour-5.jpg" alt="Traditional Sri Lankan Cuisine" onclick="openLightbox(this.src)" />
+        </div>
+        <div class="gallery-item">
+          <img src="assets/images/tour-6.jpg" alt="Slow Loris Night Safari" onclick="openLightbox(this.src)" />
+        </div>
+        <div class="gallery-item">
+          <img src="assets/images/tour-8.jpg" alt="Elephant Herd Minneriya" onclick="openLightbox(this.src)" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── REVIEWS ───────────────────────────────────────── -->
+<section id="reviews">
+  <div class="section-inner">
+    <div class="reviews-intro reveal">
+      <div class="section-label">Trusted by Travellers</div>
+      <h2 class="section-title">What <em>Guests Say</em></h2>
+      <div class="section-line" style="margin:1rem auto 0;"></div>
+      <p style="font-size:1rem;line-height:1.75;color:rgba(255,255,255,0.55);margin-top:1.5rem;">Rated and reviewed on the world's leading travel platforms. Every five-star review is a story of an unforgettable journey through Ceylon.</p>
+    </div>
+    <div class="platforms-grid reveal">
+      <div class="platform-card">
+        <img src="assets/logos/getyourguide.jpg" alt="GetYourGuide" class="platform-logo" />
+        <div class="stars">★★★★★</div>
+        <h3>GetYourGuide</h3>
+        <p>Discover our tours and read authentic traveller reviews on GetYourGuide — one of the world's largest travel experience platforms.</p>
+        <div class="platform-links">
+          <a href="https://gyg.me/A5Aut3w9" target="_blank" class="review-link">Night Safari · Habarana ↗</a>
+          <a href="https://gyg.me/tD8PWqsn" target="_blank" class="review-link">Sigiriya Cultural Tour ↗</a>
+          <a href="https://gyg.me/kMRqhtdD" target="_blank" class="review-link">Village Experience ↗</a>
+          <a href="https://gyg.me/iHspvvMB" target="_blank" class="review-link">All GetYourGuide Tours ↗</a>
+        </div>
+      </div>
+      <div class="platform-card">
+        <img src="assets/logos/viator.png" alt="Viator" class="platform-logo" />
+        <div class="stars">★★★★★</div>
+        <h3>Viator</h3>
+        <p>Browse our full experience portfolio on Viator, a TripAdvisor company — trusted by millions of travellers worldwide for authentic local experiences.</p>
+        <div class="platform-links">
+          <a href="https://www.viator.com/search/5632378P1?mcid=70066" target="_blank" class="review-link">View All Viator Experiences ↗</a>
+        </div>
+      </div>
+      <div class="platform-card">
+        <img src="assets/logos/tripadvisor.png" alt="TripAdvisor" class="platform-logo" />
+        <div class="stars">★★★★★</div>
+        <h3>TripAdvisor</h3>
+        <p>Read verified guest reviews of Lions Ceylonic Tours on TripAdvisor — the world's most trusted travel review platform.</p>
+        <div class="platform-links">
+          <a href="https://www.tripadvisor.co.uk/Attraction_Review-g304141-d34136547-Reviews-Lions_Ceylonic_Tours-Sigiriya_Central_Province.html" target="_blank" class="review-link">Lions Ceylonic Tours — Sigiriya ↗</a>
+          <a href="https://www.tripadvisor.co.uk/AttractionProductReview-g665220-d34215295-Habarana_and_Sigiriya_Night_Safari_to_See_Nocturnal_Wildlife-Habarana_North_Centra.html" target="_blank" class="review-link">Habarana Night Safari ↗</a>
+        </div>
+      </div>
+    </div>
+    <div class="testimonials-strip reveal">
+      <div class="testimonial">
+        <blockquote>"Kushan was an exceptional guide. He knew every hidden corner of the Cultural Triangle and made sure we experienced Sri Lanka like true locals. The night safari was unlike anything we'd ever seen."</blockquote>
+        <cite>— Verified Traveller, GetYourGuide</cite>
+      </div>
+      <div class="testimonial">
+        <blockquote>"From the moment we arrived to the final farewell, everything was perfectly arranged. The tuk-tuk ride, the village food experience, the boat through the mangroves — pure magic."</blockquote>
+        <cite>— Verified Traveller, Viator</cite>
+      </div>
+      <div class="testimonial">
+        <blockquote>"If you're visiting Sri Lanka, Lions Ceylonic Tours is the only name you need. Kushan's passion for his country is infectious. We left with memories that will last a lifetime."</blockquote>
+        <cite>— Verified Traveller, TripAdvisor</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── MY LIFE GALLERY ────────────────────────────────── -->
+<section id="gallery">
+  <div class="section-inner">
+    <div class="gallery-header reveal">
+      <div class="section-label">Personal Gallery</div>
+      <h2 class="section-title">Life Through <em>My Lens</em></h2>
+      <div class="section-line"></div>
+      <p style="max-width:520px;margin:1.5rem auto 0;font-size:1rem;line-height:1.75;color:rgba(255,255,255,0.5);font-weight:300;">Moments from the journey — professional milestones, island adventures, and the people who make it all worthwhile.</p>
+    </div>
+    <div class="life-masonry reveal">
+      <div class="life-item">
+        <img src="assets/images/life-1.jpg" alt="Professional" onclick="openLightbox(this.src)" />
+        <div class="life-item-overlay"><div class="life-overlay-icon">+</div></div>
+      </div>
+      <div class="life-item">
+        <img src="assets/images/life-2.jpg" alt="On the road" onclick="openLightbox(this.src)" />
+        <div class="life-item-overlay"><div class="life-overlay-icon">+</div></div>
+      </div>
+      <div class="life-item">
+        <img src="assets/images/life-3.jpg" alt="Kushan" onclick="openLightbox(this.src)" />
+        <div class="life-item-overlay"><div class="life-overlay-icon">+</div></div>
+      </div>
+      <div class="life-item">
+        <img src="assets/images/life-4.jpg" alt="Kushan by water" onclick="openLightbox(this.src)" />
+        <div class="life-item-overlay"><div class="life-overlay-icon">+</div></div>
+      </div>
+      <div class="life-item">
+        <img src="assets/images/life-5.jpg" alt="In the fields" onclick="openLightbox(this.src)" />
+        <div class="life-item-overlay"><div class="life-overlay-icon">+</div></div>
+      </div>
+      <div class="life-item">
+        <img src="assets/images/tour-4.jpg" alt="Wildlife Tour" onclick="openLightbox(this.src)" />
+        <div class="life-item-overlay"><div class="life-overlay-icon">+</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CONTACT ───────────────────────────────────────── -->
+<section id="contact">
+  <div class="section-inner">
+    <div class="contact-grid">
+      <div class="reveal">
+        <div class="section-label">Get in Touch</div>
+        <h2 class="section-title">Let's Create<br><em>Something Great</em></h2>
+        <div class="section-line"></div>
+        <p class="contact-text">Whether you're a business partner, a brand looking for market expertise, or a traveller ready to discover Sri Lanka in style — I'd love to connect.</p>
+        <div class="contact-items">
+          <div class="contact-item">
+            <div class="contact-icon">📞</div>
+            <div class="contact-item-body">
+              <h4>Phone</h4>
+              <a href="tel:+94775533276">+94 77 553 3276</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">💬</div>
+            <div class="contact-item-body">
+              <h4>WhatsApp (Tours)</h4>
+              <a href="https://wa.me/94779565880" target="_blank">+94 77 956 5880</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">✉️</div>
+            <div class="contact-item-body">
+              <h4>Email</h4>
+              <a href="mailto:Kushan.ufs@gmail.com">Kushan.ufs@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">🌐</div>
+            <div class="contact-item-body">
+              <h4>Tours Website</h4>
+              <a href="http://www.lionsceylonictours.com" target="_blank">www.lionsceylonictours.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">💼</div>
+            <div class="contact-item-body">
+              <h4>LinkedIn</h4>
+              <a href="https://www.linkedin.com/in/thilinakushan-b27099115" target="_blank">linkedin.com/in/thilinakushan</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="reveal">
+        <form class="contact-form" onsubmit="handleForm(event)">
+          <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;margin-bottom:1.5rem;color:var(--gold-pale)">Send a Message</h3>
+          <div class="form-group">
+            <label class="form-label">Your Name</label>
+            <input type="text" class="form-input" placeholder="John Smith" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email Address</label>
+            <input type="email" class="form-input" placeholder="john@example.com" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Subject</label>
+            <select class="form-input" style="appearance:none;">
+              <option value="">Select enquiry type</option>
+              <option>Tour Booking Enquiry</option>
+              <option>Marketing Partnership</option>
+              <option>General Enquiry</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Message</label>
+            <textarea class="form-textarea" placeholder="Tell me about your plans or enquiry..."></textarea>
+          </div>
+          <button type="submit" class="btn-submit">Send Message →</button>
+          <div id="form-success" style="display:none;color:var(--gold);font-size:0.85rem;margin-top:0.75rem;padding:0.75rem;border:1px solid rgba(201,168,76,0.3);">
+            ✓ Thank you! Your message has been prepared. Please send via your email client.
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─────────────────────────────────────────── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">THILINA KUSHAN</div>
+    <div class="footer-text">© 2025 · Marketing Executive &amp; Lions Ceylonic Tours · Sri Lanka</div>
+    <div class="footer-links">
+      <a href="#home">Home</a>
+      <a href="#marketing">Career</a>
+      <a href="#lions">Tours</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ─── SCRIPTS ──────────────────────────────────────── -->
+<script>
+  // Custom cursor
+  const cursor = document.getElementById('cursor');
+  const ring = document.getElementById('cursor-ring');
+  document.addEventListener('mousemove', e => {
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top  = e.clientY + 'px';
+    setTimeout(() => {
+      ring.style.left = e.clientX + 'px';
+      ring.style.top  = e.clientY + 'px';
+    }, 80);
+  });
+  document.querySelectorAll('a,button').forEach(el => {
+    el.addEventListener('mouseenter', () => {
+      cursor.style.width = '20px'; cursor.style.height = '20px';
+      ring.style.width = '52px'; ring.style.height = '52px';
+    });
+    el.addEventListener('mouseleave', () => {
+      cursor.style.width = '12px'; cursor.style.height = '12px';
+      ring.style.width = '36px'; ring.style.height = '36px';
+    });
+  });
+
+  // Sticky nav
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        // Also trigger timeline items
+        e.target.querySelectorAll('.timeline-item').forEach((item,i) => {
+          setTimeout(() => item.classList.add('visible'), i * 150);
+        });
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Lightbox
+  function openLightbox(src) {
+    document.getElementById('lightbox-img').src = src;
+    document.getElementById('lightbox').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  document.getElementById('lightbox-close').addEventListener('click', () => {
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  });
+  document.getElementById('lightbox').addEventListener('click', e => {
+    if (e.target.id === 'lightbox') {
+      document.getElementById('lightbox').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  });
+
+  // Form handler
+  function handleForm(e) {
+    e.preventDefault();
+    document.getElementById('form-success').style.display = 'block';
+    e.target.reset();
+  }
+</script>
+</body>
+</html>
